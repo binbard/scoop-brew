@@ -2,10 +2,11 @@
 
 Scoop bucket containing community-maintained packages.
 
-## Add this bucket
+## Add this bucket from a clone
 
 ```powershell
-scoop bucket add brew https://github.com/<owner>/scoop-brew
+$bucketUrl = (git remote get-url origin) -replace '\.git$', ''
+scoop bucket add brew $bucketUrl
 ```
 
 ## Install an app
